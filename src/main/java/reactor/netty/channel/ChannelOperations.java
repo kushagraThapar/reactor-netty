@@ -157,6 +157,10 @@ public class ChannelOperations<INBOUND extends NettyInbound, OUTBOUND extends Ne
 
 	@Override
 	public void dispose() {
+		if (log.isTraceEnabled()) {
+			log.trace(format(channel(), "Disposing ChannelOperation from a channel"),
+					new Exception("ChannelOperation dispose stack"));
+		}
 		if (!inbound.isDisposed()) {
 			inbound.cancel();
 		}
