@@ -73,7 +73,7 @@ ext {
 	}
 
 	// Testing
-	jacksonDatabindVersion = '2.11.2'
+	jacksonDatabindVersion = '2.12.4'
 	testAddonVersion = reactorCoreVersion
 	hamcrestVersion = '2.2'
 	assertJVersion = '3.17.1'
